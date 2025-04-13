@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+* Custom styles for the ERP interface
+* 
+* These styles help emulate the look and feel of a legacy Windows-style
+* enterprise application with its characteristic colors and input styles.
+*/
+
+body {
+  font-family: "Microsoft JhengHei", "MingLiU", sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #e6f3f7;
+}
+
+/* Remove arrows from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Customize focus styles to match legacy UI */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 1px solid #4a90e2;
+  box-shadow: 0 0 1px #4a90e2;
+}
+
+/* Make the scrollbars match the Windows classic look */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c8c8c8;
+  border: 1px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+/* Specific styles for the ERP interface */
+.erp-window {
+  border: 1px solid #a0a0a0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.erp-header {
+  background: linear-gradient(to right, #d8d8d8, #f0f0f0);
+}
+
+.erp-tab {
+  border-top: 1px solid #a0a0a0;
+  border-left: 1px solid #a0a0a0;
+  border-right: 1px solid #a0a0a0;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.erp-grid-header {
+  background-color: #c1e0e5;
+  font-weight: normal;
+}
+
+.erp-customer-field {
+  background-color: #e6f3ff;
+  border-color: #abd5f5;
+}
+
+/* Specific font styles for Chinese text */
+.chinese-text {
+  letter-spacing: 1px;
+}
+
+/* Specific styles for form labels */
+.form-label {
+  font-weight: normal;
+  text-align: right;
+}
+
+/* Blue highlight for specific labels */
+.label-highlight {
+  color: #0066cc;
+}
+
+/* Exact color matches based on the screenshot */
+.bg-window-header {
+  background: linear-gradient(to right, #d8d8d8, #f0f0f0);
+}
+
+.bg-app-body {
+  background-color: #e6f3f7;
+}
+
+.bg-form-gray {
+  background-color: #f0f0f0;
+}
+
+.bg-grid-header {
+  background-color: #c1e0e5;
+}
+
+.bg-sidebar {
+  background-color: #ffffff;
+}
+
+.bg-active-item {
+  background-color: #e8e8e8;
+}
+
+.text-form-blue {
+  color: #0066cc;
+}
+
+/* Pixel-perfect input field styles */
+.erp-input {
+  background-color: white;
+  border: 1px solid #a0a0a0;
+  height: 22px;
+  padding: 1px 2px;
+}
+
+.erp-select {
+  background-color: white;
+  border: 1px solid #a0a0a0;
+  height: 22px;
+  padding: 0px 2px;
+}
+
+.erp-tab-active {
+  background-color: white;
+  border-bottom: 1px solid white;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 10;
+}
+
+.erp-tab-inactive {
+  background-color: #f0f0f0;
+}
+
+/* Toolbar button style */
+.erp-toolbar-button {
+  border: 1px solid #a0a0a0;
+  background-color: #f0f0f0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erp-toolbar-button:hover {
+  background-color: #e0e0e0;
+}
